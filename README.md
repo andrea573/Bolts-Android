@@ -1,10 +1,7 @@
 Bolts
 ============
 [![Build Status][build-status-svg]][build-status-link]
-[![Coverage Status][coverage-status-svg]][coverage-status-link]
-[![Maven Central][maven-tasks-svg]][maven-tasks-link]
-[![Maven Central][maven-applinks-svg]][maven-applinks-link]
-[![License][license-svg]][license-link]
+[![Coverage Status]
 
 Bolts is a collection of low-level libraries designed to make developing mobile
 apps easier. Bolts was designed by Parse and Facebook for our own internal use,
@@ -26,12 +23,7 @@ Download [the latest JAR][latest] or define in Gradle:
 dependencies {
   compile 'com.parse.bolts:bolts-tasks:1.4.0'
   compile 'com.parse.bolts:bolts-applinks:1.4.0'
-}
-```
 
-Snapshots of the development version are available in [Sonatype's `snapshots` repository][snap].
-
-# Tasks
 
 To build a truly responsive Android application, you must keep long-running operations off of the UI thread, and be careful to avoid blocking anything the UI thread might be waiting on. This means you will need to execute various operations in the background. To make this easier, we've added a class called `Task`. A `Task` represents an asynchronous operation. Typically, a `Task` is returned from an asynchronous function and gives the ability to continue processing the result of the task. When a `Task` is returned from a function, it's already begun doing its job. A `Task` is not tied to a particular threading model: it represents the work being done, not where it is executing. `Task`s have many advantages over other methods of asynchronous programming, such as callbacks and `AsyncTask`.
 * They consume fewer system resources, since they don't occupy a thread while waiting on other `Task`s.
